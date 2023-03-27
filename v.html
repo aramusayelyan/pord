@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ֆիզիկ</title>
+    <link rel="stylesheet" href="ss.css">
+    <script src="fiz.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ֆիզիկ</title>
+  </head>
+  <body>
+    <button id="open-form-button">&#9993;</button>
+    <form id="form" style="display:none;">
+      <div class="field">
+        <label for="from_name">Անուն</label>
+        <input type="text" name="from_name" id="from_name">
+      </div>
+      <div class="field">
+        <label for="reply_to">Էլ․ Հասցե</label>
+        <input type="text" name="reply_to" id="reply_to">
+      </div>
+      <div class="field">
+        <label for="message">Հաղորթագրություն</label>
+        <input type="text" name="message" id="message">
+      </div>
+    
+      <input type="submit" id="button" value="Ուղարկել" >
+    </form>
+    <script src="script.js"></script>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+      emailjs.init('az3LXRObWM4KAv2ge')
+      const form = document.getElementById('form');
+      const button = document.getElementById('open-form-button');
+      button.addEventListener('click', function() {
+        form.style.display = form.style.display === 'none' ? '' : 'none';
+      });
+    </script>
+    <div class="container">
+      <h1>Ֆիզիկ</h1>
+      <form>
+        <label for="unknown">Անհայտ:</label>
+        <select id="unknown">
+          <option value="speed">Արագությունից</option>
+          <option value="v1">Արագացումից</option>
+          <option value="v2">Կինետիկ էներգիայից</option>
+        </select><br>
+        <button type="button" onclick="openWindow()">Առաջ</button>
+      </form>
+    </div>
+  </body>
+</html>

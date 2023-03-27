@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="fiz.js"></script>
+    <link rel="stylesheet" href="ss.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ֆիզիկ</title>
+  </head>
+  <body>
+    <button id="open-form-button">&#9993;</button>
+    <form id="form" style="display:none;">
+      <div class="field">
+        <label for="from_name">Անուն</label>
+        <input type="text" name="from_name" id="from_name">
+      </div>
+      <div class="field">
+        <label for="reply_to">Էլ․ Հասցե</label>
+        <input type="text" name="reply_to" id="reply_to">
+      </div>
+      <div class="field">
+        <label for="message">Հաղորթագրություն</label>
+        <input type="text" name="message" id="message">
+      </div>
+    
+      <input type="submit" id="button" value="Ուղարկել" >
+    </form>
+    <script src="script.js"></script>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+      emailjs.init('az3LXRObWM4KAv2ge')
+      const form = document.getElementById('form');
+      const button = document.getElementById('open-form-button');
+      button.addEventListener('click', function() {
+        form.style.display = form.style.display === 'none' ? '' : 'none';
+      });
+    </script>
+    <div class="container">
+        <h1>Ֆիզիկ</h1>
+    <form>
+        <label for="unknown">Անհայտ:</label>
+        <select id="unknown">
+            <option value="m3">Զանգված</option>
+        </select><br>
+              
+        <label ><h4>Որոշ մարմիների խտությունը</h4> </label>
+        <select >
+            <option value="1">Ալյումին-----2700</option>
+            <option value="2">Աղյուս-----1800</option>
+            <option value="3">Անագ-----7300</option>
+            <option value="4">Ապակի-----2500</option>
+            <option value="5">Արծաթ-----10500</option>
+            <option value="6">Արույր-----8500</option>
+            <option value="7">Բետոն-----2200</option>
+            <option value="8">Գրանիտ-----2600</option>
+            <option value="9">Երկաթ,պողպատ-----7800</option>
+            <option value="10">Թուջ-----7000</option>
+            <option value="11">Խցան-----240</option>
+            <option value="12">Կաղնե փայտ-----800</option>
+            <option value="13">Կապար-----11300</option>
+            <option value="14">Մարմար-----2700</option>
+            <option value="15">Շաքար-----1600</option>
+            <option value="16">Ոսկի-----19300</option>
+            <option value="17">Պղինձ-----8900</option>
+            <option value="18">Սառույց-----900</option>
+            <option value="19">Սոճու փայտ-----400</option>
+            <option value="20">Ցեմենտ-----2800</option>
+            <option value="21">Ցիննկ-----7100</option>
+            <option value="22">Բենզին-----700</option>
+            <option value="23">Եթեր-----710</option>
+            <option value="24">Ծծմբական թթու-----1800</option>
+            <option value="25">Կերոսին-----800</option>
+            <option value="26">Ձեթ-----920</option>
+            <option value="27">Մեղր-----1350</option>
+            <option value="28">Նավթ-----800</option>
+            <option value="29">Ջուր-----1000</option>
+            <option value="30">Ծովի ջուր-----1030</option>
+            <option value="31">Սնդիկ-----13600</option>
+            <option value="32">Սպիրտ-----800</option>
+            <option value="33">Հելիում-----0,18</option>
+            <option value="34">Ջրածին-----0,09</option>
+            <option value="35">Օդ-----1,29</option>
+          </select><br>
+      
+        <label for="known1">Ծավալ</label>
+        <input type="text" id="known1"><br>
+        <label for="known2">Խտություն</label>
+        <input type="text" id="known2">
+
+      
+        <button type="button" onclick="calculate()">Տեսնել Արդյունքը</button>
+      </form>
+    </div>
+</body>
+</html>
